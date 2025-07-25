@@ -90,7 +90,7 @@ const componentInfo = {
             'IORC': 'I/O Read Control',
             'IOWC': 'I/O Write Control'
         },
-        image: 'controlbus.png'
+    image: 'assets/controlbus.png'
     },
     'databus': {
         name: 'Data Bus',
@@ -308,7 +308,7 @@ function createWorkspaceComponent(componentType, x, y) {
     
     // Add component content
     const img = document.createElement('img');
-    img.src = componentInfo[componentType].image || (componentType + '.png');
+    img.src = componentInfo[componentType].image || ('assets/' + componentType + '.png');
     img.alt = componentInfo[componentType].name;
     img.width = 100;
     
@@ -849,7 +849,7 @@ function showHint() {
     hintContent.innerHTML = `
         <h2>8086 Architecture Hint</h2>
         <p>Here's where to start - the Crystal component:</p>
-        <img src="xtal.png" alt="Crystal Component" style="max-width: 100%; height: auto; margin: 20px 0;">
+    <img src="assets/xtal.png" alt="Crystal Component" style="max-width: 100%; height: auto; margin: 20px 0;">
         <p>Start by placing the Crystal component first, then add the 8284 Clock Generator and connect them. The crystal provides the clock signal for the entire 8086 system.</p>
         <button id="close-hint" style="margin-top: 20px; padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
     `;
